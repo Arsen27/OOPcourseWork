@@ -1,0 +1,10 @@
+C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/rebuild_cache.dir
+C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/SDL2-static.dir
+C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/SDL2main.dir
+C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/install/local.dir
+C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/install.dir
+C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/edit_cache.dir
+C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/SDL2.dir
+C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/uninstall.dir
+C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/list_install_components.dir
+C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/install/strip.dir

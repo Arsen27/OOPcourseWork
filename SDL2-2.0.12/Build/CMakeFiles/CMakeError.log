@@ -1,0 +1,731 @@
+Performing C SOURCE FILE Test HAVE_ALTIVEC_H_HDR failed with the following output:
+Change Dir: C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/MinGW/bin/mingw32-make.exe cmTC_6591b/fast && C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_6591b.dir\build.make CMakeFiles/cmTC_6591b.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6591b.dir/src.c.obj
+C:\MinGW\bin\gcc.exe   -g -O3 -idirafter C:/Users/Arsen/Desktop/SDL2-2.0.12/src/video/khronos -DHAVE_ALTIVEC_H_HDR -maltivec   -o CMakeFiles\cmTC_6591b.dir\src.c.obj   -c C:\Users\Arsen\Desktop\SDL2-2.0.12\Build\CMakeFiles\CMakeTmp\src.c
+gcc.exe: error: unrecognized command line option '-maltivec'
+CMakeFiles\cmTC_6591b.dir\build.make:81: recipe for target 'CMakeFiles/cmTC_6591b.dir/src.c.obj' failed
+mingw32-make.exe[1]: *** [CMakeFiles/cmTC_6591b.dir/src.c.obj] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Makefile:137: recipe for target 'cmTC_6591b/fast' failed
+mingw32-make.exe: *** [cmTC_6591b/fast] Error 2
+
+
+Source file was:
+
+          #include <altivec.h>
+          vector unsigned int vzero() {
+              return vec_splat_u32(0);
+          }
+          int main(int argc, char **argv) { }
+Performing C SOURCE FILE Test HAVE_ALTIVEC failed with the following output:
+Change Dir: C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/MinGW/bin/mingw32-make.exe cmTC_442cd/fast && C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_442cd.dir\build.make CMakeFiles/cmTC_442cd.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_442cd.dir/src.c.obj
+C:\MinGW\bin\gcc.exe   -g -O3 -idirafter C:/Users/Arsen/Desktop/SDL2-2.0.12/src/video/khronos -DHAVE_ALTIVEC -maltivec   -o CMakeFiles\cmTC_442cd.dir\src.c.obj   -c C:\Users\Arsen\Desktop\SDL2-2.0.12\Build\CMakeFiles\CMakeTmp\src.c
+gcc.exe: error: unrecognized command line option '-maltivec'
+CMakeFiles\cmTC_442cd.dir\build.make:81: recipe for target 'CMakeFiles/cmTC_442cd.dir/src.c.obj' failed
+mingw32-make.exe[1]: *** [CMakeFiles/cmTC_442cd.dir/src.c.obj] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Makefile:137: recipe for target 'cmTC_442cd/fast' failed
+mingw32-make.exe: *** [cmTC_442cd/fast] Error 2
+
+
+Source file was:
+
+          vector unsigned int vzero() {
+              return vec_splat_u32(0);
+          }
+          int main(int argc, char **argv) { }
+Performing C SOURCE FILE Test ARMSIMD_FOUND failed with the following output:
+Change Dir: C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/MinGW/bin/mingw32-make.exe cmTC_30070/fast && C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_30070.dir\build.make CMakeFiles/cmTC_30070.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_30070.dir/src.c.obj
+C:\MinGW\bin\gcc.exe   -g -O3 -idirafter C:/Users/Arsen/Desktop/SDL2-2.0.12/src/video/khronos -DARMSIMD_FOUND  -x assembler-with-cpp   -o CMakeFiles\cmTC_30070.dir\src.c.obj   -c C:\Users\Arsen\Desktop\SDL2-2.0.12\Build\CMakeFiles\CMakeTmp\src.c
+C:\Users\Arsen\Desktop\SDL2-2.0.12\Build\CMakeFiles\CMakeTmp\src.c:8:10: error: #error EABI is required (to be sure that calling conventions are compatible)
+    8 |         #error EABI is required (to be sure that calling conventions are compatible)
+      |          ^~~~~
+CMakeFiles\cmTC_30070.dir\build.make:81: recipe for target 'CMakeFiles/cmTC_30070.dir/src.c.obj' failed
+mingw32-make.exe[1]: *** [CMakeFiles/cmTC_30070.dir/src.c.obj] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Makefile:137: recipe for target 'cmTC_30070/fast' failed
+mingw32-make.exe: *** [cmTC_30070/fast] Error 2
+
+
+Source file was:
+
+        .text
+        .arch armv6
+        .object_arch armv4
+        .arm
+        .altmacro
+        #ifndef __ARM_EABI__
+        #error EABI is required (to be sure that calling conventions are compatible)
+        #endif
+        pld [r0]
+        uqadd8 r0, r0, r0
+      
+Performing C SOURCE FILE Test ARMNEON_FOUND failed with the following output:
+Change Dir: C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/MinGW/bin/mingw32-make.exe cmTC_a6712/fast && C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_a6712.dir\build.make CMakeFiles/cmTC_a6712.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a6712.dir/src.c.obj
+C:\MinGW\bin\gcc.exe   -g -O3 -idirafter C:/Users/Arsen/Desktop/SDL2-2.0.12/src/video/khronos -DARMNEON_FOUND  -x assembler-with-cpp   -o CMakeFiles\cmTC_a6712.dir\src.c.obj   -c C:\Users\Arsen\Desktop\SDL2-2.0.12\Build\CMakeFiles\CMakeTmp\src.c
+C:\Users\Arsen\Desktop\SDL2-2.0.12\Build\CMakeFiles\CMakeTmp\src.c:10:10: error: #error EABI is required (to be sure that calling conventions are compatible)
+   10 |         #error EABI is required (to be sure that calling conventions are compatible)
+      |          ^~~~~
+CMakeFiles\cmTC_a6712.dir\build.make:81: recipe for target 'CMakeFiles/cmTC_a6712.dir/src.c.obj' failed
+mingw32-make.exe[1]: *** [CMakeFiles/cmTC_a6712.dir/src.c.obj] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Makefile:137: recipe for target 'cmTC_a6712/fast' failed
+mingw32-make.exe: *** [cmTC_a6712/fast] Error 2
+
+
+Source file was:
+
+        .text
+        .fpu neon
+        .arch armv7a
+        .object_arch armv4
+        .eabi_attribute 10, 0
+        .arm
+        .altmacro
+        #ifndef __ARM_EABI__
+        #error EABI is required (to be sure that calling conventions are compatible)
+        #endif
+        pld [r0]
+        vmovn.u16 d0, q0
+      
+Determining if the include file libunwind.h exists failed with the following output:
+Change Dir: C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/MinGW/bin/mingw32-make.exe cmTC_12116/fast && C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_12116.dir\build.make CMakeFiles/cmTC_12116.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_12116.dir/CheckIncludeFile.c.obj
+C:\MinGW\bin\gcc.exe   -g -O3 -idirafter C:/Users/Arsen/Desktop/SDL2-2.0.12/src/video/khronos    -o CMakeFiles\cmTC_12116.dir\CheckIncludeFile.c.obj   -c C:\Users\Arsen\Desktop\SDL2-2.0.12\Build\CMakeFiles\CMakeTmp\CheckIncludeFile.c
+C:\Users\Arsen\Desktop\SDL2-2.0.12\Build\CMakeFiles\CMakeTmp\CheckIncludeFile.c:1:10: fatal error: libunwind.h: No such file or directory
+    1 | #include <libunwind.h>
+      |          ^~~~~~~~~~~~~
+compilation terminated.
+CMakeFiles\cmTC_12116.dir\build.make:81: recipe for target 'CMakeFiles/cmTC_12116.dir/CheckIncludeFile.c.obj' failed
+mingw32-make.exe[1]: *** [CMakeFiles/cmTC_12116.dir/CheckIncludeFile.c.obj] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Makefile:137: recipe for target 'cmTC_12116/fast' failed
+mingw32-make.exe: *** [cmTC_12116/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test HAVE_MPROTECT failed with the following output:
+Change Dir: C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/MinGW/bin/mingw32-make.exe cmTC_05c07/fast && C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_05c07.dir\build.make CMakeFiles/cmTC_05c07.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_05c07.dir/src.c.obj
+C:\MinGW\bin\gcc.exe   -g -O3 -idirafter C:/Users/Arsen/Desktop/SDL2-2.0.12/src/video/khronos -DHAVE_MPROTECT   -o CMakeFiles\cmTC_05c07.dir\src.c.obj   -c C:\Users\Arsen\Desktop\SDL2-2.0.12\Build\CMakeFiles\CMakeTmp\src.c
+C:\Users\Arsen\Desktop\SDL2-2.0.12\Build\CMakeFiles\CMakeTmp\src.c:2:39: fatal error: sys/mman.h: No such file or directory
+    2 |                              #include <sys/mman.h>
+      |                                       ^~~~~~~~~~~~
+compilation terminated.
+CMakeFiles\cmTC_05c07.dir\build.make:81: recipe for target 'CMakeFiles/cmTC_05c07.dir/src.c.obj' failed
+mingw32-make.exe[1]: *** [CMakeFiles/cmTC_05c07.dir/src.c.obj] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Makefile:137: recipe for target 'cmTC_05c07/fast' failed
+mingw32-make.exe: *** [cmTC_05c07/fast] Error 2
+
+
+Source file was:
+#include <sys/types.h>
+                             #include <sys/mman.h>
+                             int main() { }
+Determining if the function bcopy exists failed with the following output:
+Change Dir: C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/MinGW/bin/mingw32-make.exe cmTC_5d3c5/fast && C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_5d3c5.dir\build.make CMakeFiles/cmTC_5d3c5.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5d3c5.dir/CheckFunctionExists.c.obj
+C:\MinGW\bin\gcc.exe   -g -O3 -idirafter C:/Users/Arsen/Desktop/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=bcopy   -o CMakeFiles\cmTC_5d3c5.dir\CheckFunctionExists.c.obj   -c "C:\Program Files\CMake\share\cmake-3.17\Modules\CheckFunctionExists.c"
+<command-line>: warning: conflicting types for built-in function 'bcopy'; expected 'void(const void *, void *, unsigned int)' [-Wbuiltin-declaration-mismatch]
+C:\Program Files\CMake\share\cmake-3.17\Modules\CheckFunctionExists.c:7:3: note: in expansion of macro 'CHECK_FUNCTION_EXISTS'
+    7 |   CHECK_FUNCTION_EXISTS(void);
+      |   ^~~~~~~~~~~~~~~~~~~~~
+Linking C executable cmTC_5d3c5.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_5d3c5.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_5d3c5.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_5d3c5.dir/objects.a @CMakeFiles\cmTC_5d3c5.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe -g -O3 -idirafter C:/Users/Arsen/Desktop/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=bcopy    -Wl,--whole-archive CMakeFiles\cmTC_5d3c5.dir/objects.a -Wl,--no-whole-archive  -o cmTC_5d3c5.exe -Wl,--out-implib,libcmTC_5d3c5.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_5d3c5.dir\linklibs.rsp
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: CMakeFiles\cmTC_5d3c5.dir/objects.a(CheckFunctionExists.c.obj): in function `main':
+C:/Program Files/CMake/share/cmake-3.17/Modules/CheckFunctionExists.c:17: undefined reference to `bcopy'
+collect2.exe: error: ld returned 1 exit status
+CMakeFiles\cmTC_5d3c5.dir\build.make:104: recipe for target 'cmTC_5d3c5.exe' failed
+mingw32-make.exe[1]: *** [cmTC_5d3c5.exe] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Makefile:137: recipe for target 'cmTC_5d3c5/fast' failed
+mingw32-make.exe: *** [cmTC_5d3c5/fast] Error 2
+
+
+
+Determining if the function strlcpy exists failed with the following output:
+Change Dir: C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/MinGW/bin/mingw32-make.exe cmTC_01114/fast && C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_01114.dir\build.make CMakeFiles/cmTC_01114.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_01114.dir/CheckFunctionExists.c.obj
+C:\MinGW\bin\gcc.exe   -g -O3 -idirafter C:/Users/Arsen/Desktop/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=strlcpy   -o CMakeFiles\cmTC_01114.dir\CheckFunctionExists.c.obj   -c "C:\Program Files\CMake\share\cmake-3.17\Modules\CheckFunctionExists.c"
+Linking C executable cmTC_01114.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_01114.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_01114.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_01114.dir/objects.a @CMakeFiles\cmTC_01114.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe -g -O3 -idirafter C:/Users/Arsen/Desktop/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=strlcpy    -Wl,--whole-archive CMakeFiles\cmTC_01114.dir/objects.a -Wl,--no-whole-archive  -o cmTC_01114.exe -Wl,--out-implib,libcmTC_01114.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_01114.dir\linklibs.rsp
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: CMakeFiles\cmTC_01114.dir/objects.a(CheckFunctionExists.c.obj): in function `main':
+C:/Program Files/CMake/share/cmake-3.17/Modules/CheckFunctionExists.c:17: undefined reference to `strlcpy'
+collect2.exe: error: ld returned 1 exit status
+CMakeFiles\cmTC_01114.dir\build.make:104: recipe for target 'cmTC_01114.exe' failed
+mingw32-make.exe[1]: *** [cmTC_01114.exe] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Makefile:137: recipe for target 'cmTC_01114/fast' failed
+mingw32-make.exe: *** [cmTC_01114/fast] Error 2
+
+
+
+Determining if the function strlcat exists failed with the following output:
+Change Dir: C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/MinGW/bin/mingw32-make.exe cmTC_e94ab/fast && C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_e94ab.dir\build.make CMakeFiles/cmTC_e94ab.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e94ab.dir/CheckFunctionExists.c.obj
+C:\MinGW\bin\gcc.exe   -g -O3 -idirafter C:/Users/Arsen/Desktop/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=strlcat   -o CMakeFiles\cmTC_e94ab.dir\CheckFunctionExists.c.obj   -c "C:\Program Files\CMake\share\cmake-3.17\Modules\CheckFunctionExists.c"
+Linking C executable cmTC_e94ab.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_e94ab.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_e94ab.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_e94ab.dir/objects.a @CMakeFiles\cmTC_e94ab.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe -g -O3 -idirafter C:/Users/Arsen/Desktop/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=strlcat    -Wl,--whole-archive CMakeFiles\cmTC_e94ab.dir/objects.a -Wl,--no-whole-archive  -o cmTC_e94ab.exe -Wl,--out-implib,libcmTC_e94ab.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_e94ab.dir\linklibs.rsp
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: CMakeFiles\cmTC_e94ab.dir/objects.a(CheckFunctionExists.c.obj): in function `main':
+C:/Program Files/CMake/share/cmake-3.17/Modules/CheckFunctionExists.c:17: undefined reference to `strlcat'
+collect2.exe: error: ld returned 1 exit status
+CMakeFiles\cmTC_e94ab.dir\build.make:104: recipe for target 'cmTC_e94ab.exe' failed
+mingw32-make.exe[1]: *** [cmTC_e94ab.exe] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Makefile:137: recipe for target 'cmTC_e94ab/fast' failed
+mingw32-make.exe: *** [cmTC_e94ab/fast] Error 2
+
+
+
+Determining if the function _uitoa exists failed with the following output:
+Change Dir: C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/MinGW/bin/mingw32-make.exe cmTC_e9b52/fast && C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_e9b52.dir\build.make CMakeFiles/cmTC_e9b52.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e9b52.dir/CheckFunctionExists.c.obj
+C:\MinGW\bin\gcc.exe   -g -O3 -idirafter C:/Users/Arsen/Desktop/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=_uitoa   -o CMakeFiles\cmTC_e9b52.dir\CheckFunctionExists.c.obj   -c "C:\Program Files\CMake\share\cmake-3.17\Modules\CheckFunctionExists.c"
+Linking C executable cmTC_e9b52.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_e9b52.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_e9b52.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_e9b52.dir/objects.a @CMakeFiles\cmTC_e9b52.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe -g -O3 -idirafter C:/Users/Arsen/Desktop/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=_uitoa    -Wl,--whole-archive CMakeFiles\cmTC_e9b52.dir/objects.a -Wl,--no-whole-archive  -o cmTC_e9b52.exe -Wl,--out-implib,libcmTC_e9b52.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_e9b52.dir\linklibs.rsp
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: CMakeFiles\cmTC_e9b52.dir/objects.a(CheckFunctionExists.c.obj): in function `main':
+C:/Program Files/CMake/share/cmake-3.17/Modules/CheckFunctionExists.c:17: undefined reference to `_uitoa'
+collect2.exe: error: ld returned 1 exit status
+CMakeFiles\cmTC_e9b52.dir\build.make:104: recipe for target 'cmTC_e9b52.exe' failed
+mingw32-make.exe[1]: *** [cmTC_e9b52.exe] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Makefile:137: recipe for target 'cmTC_e9b52/fast' failed
+mingw32-make.exe: *** [cmTC_e9b52/fast] Error 2
+
+
+
+Determining if the function wcslcat exists failed with the following output:
+Change Dir: C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/MinGW/bin/mingw32-make.exe cmTC_7ea76/fast && C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_7ea76.dir\build.make CMakeFiles/cmTC_7ea76.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7ea76.dir/CheckFunctionExists.c.obj
+C:\MinGW\bin\gcc.exe   -g -O3 -idirafter C:/Users/Arsen/Desktop/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=wcslcat   -o CMakeFiles\cmTC_7ea76.dir\CheckFunctionExists.c.obj   -c "C:\Program Files\CMake\share\cmake-3.17\Modules\CheckFunctionExists.c"
+Linking C executable cmTC_7ea76.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_7ea76.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_7ea76.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_7ea76.dir/objects.a @CMakeFiles\cmTC_7ea76.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe -g -O3 -idirafter C:/Users/Arsen/Desktop/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=wcslcat    -Wl,--whole-archive CMakeFiles\cmTC_7ea76.dir/objects.a -Wl,--no-whole-archive  -o cmTC_7ea76.exe -Wl,--out-implib,libcmTC_7ea76.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_7ea76.dir\linklibs.rsp
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: CMakeFiles\cmTC_7ea76.dir/objects.a(CheckFunctionExists.c.obj): in function `main':
+C:/Program Files/CMake/share/cmake-3.17/Modules/CheckFunctionExists.c:17: undefined reference to `wcslcat'
+collect2.exe: error: ld returned 1 exit status
+CMakeFiles\cmTC_7ea76.dir\build.make:104: recipe for target 'cmTC_7ea76.exe' failed
+mingw32-make.exe[1]: *** [cmTC_7ea76.exe] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Makefile:137: recipe for target 'cmTC_7ea76/fast' failed
+mingw32-make.exe: *** [cmTC_7ea76/fast] Error 2
+
+
+
+Determining if the function wcslcpy exists failed with the following output:
+Change Dir: C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/MinGW/bin/mingw32-make.exe cmTC_f46dd/fast && C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_f46dd.dir\build.make CMakeFiles/cmTC_f46dd.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f46dd.dir/CheckFunctionExists.c.obj
+C:\MinGW\bin\gcc.exe   -g -O3 -idirafter C:/Users/Arsen/Desktop/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=wcslcpy   -o CMakeFiles\cmTC_f46dd.dir\CheckFunctionExists.c.obj   -c "C:\Program Files\CMake\share\cmake-3.17\Modules\CheckFunctionExists.c"
+Linking C executable cmTC_f46dd.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_f46dd.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_f46dd.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_f46dd.dir/objects.a @CMakeFiles\cmTC_f46dd.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe -g -O3 -idirafter C:/Users/Arsen/Desktop/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=wcslcpy    -Wl,--whole-archive CMakeFiles\cmTC_f46dd.dir/objects.a -Wl,--no-whole-archive  -o cmTC_f46dd.exe -Wl,--out-implib,libcmTC_f46dd.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_f46dd.dir\linklibs.rsp
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: CMakeFiles\cmTC_f46dd.dir/objects.a(CheckFunctionExists.c.obj): in function `main':
+C:/Program Files/CMake/share/cmake-3.17/Modules/CheckFunctionExists.c:17: undefined reference to `wcslcpy'
+collect2.exe: error: ld returned 1 exit status
+CMakeFiles\cmTC_f46dd.dir\build.make:104: recipe for target 'cmTC_f46dd.exe' failed
+mingw32-make.exe[1]: *** [cmTC_f46dd.exe] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Makefile:137: recipe for target 'cmTC_f46dd/fast' failed
+mingw32-make.exe: *** [cmTC_f46dd/fast] Error 2
+
+
+
+Determining if the function fseeko exists failed with the following output:
+Change Dir: C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/MinGW/bin/mingw32-make.exe cmTC_8b1ec/fast && C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_8b1ec.dir\build.make CMakeFiles/cmTC_8b1ec.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8b1ec.dir/CheckFunctionExists.c.obj
+C:\MinGW\bin\gcc.exe   -g -O3 -idirafter C:/Users/Arsen/Desktop/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=fseeko   -o CMakeFiles\cmTC_8b1ec.dir\CheckFunctionExists.c.obj   -c "C:\Program Files\CMake\share\cmake-3.17\Modules\CheckFunctionExists.c"
+Linking C executable cmTC_8b1ec.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_8b1ec.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_8b1ec.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_8b1ec.dir/objects.a @CMakeFiles\cmTC_8b1ec.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe -g -O3 -idirafter C:/Users/Arsen/Desktop/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=fseeko    -Wl,--whole-archive CMakeFiles\cmTC_8b1ec.dir/objects.a -Wl,--no-whole-archive  -o cmTC_8b1ec.exe -Wl,--out-implib,libcmTC_8b1ec.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_8b1ec.dir\linklibs.rsp
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: CMakeFiles\cmTC_8b1ec.dir/objects.a(CheckFunctionExists.c.obj): in function `main':
+C:/Program Files/CMake/share/cmake-3.17/Modules/CheckFunctionExists.c:17: undefined reference to `fseeko'
+collect2.exe: error: ld returned 1 exit status
+CMakeFiles\cmTC_8b1ec.dir\build.make:104: recipe for target 'cmTC_8b1ec.exe' failed
+mingw32-make.exe[1]: *** [cmTC_8b1ec.exe] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Makefile:137: recipe for target 'cmTC_8b1ec/fast' failed
+mingw32-make.exe: *** [cmTC_8b1ec/fast] Error 2
+
+
+
+Determining if the function sigaction exists failed with the following output:
+Change Dir: C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/MinGW/bin/mingw32-make.exe cmTC_5441c/fast && C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_5441c.dir\build.make CMakeFiles/cmTC_5441c.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5441c.dir/CheckFunctionExists.c.obj
+C:\MinGW\bin\gcc.exe   -g -O3 -idirafter C:/Users/Arsen/Desktop/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=sigaction   -o CMakeFiles\cmTC_5441c.dir\CheckFunctionExists.c.obj   -c "C:\Program Files\CMake\share\cmake-3.17\Modules\CheckFunctionExists.c"
+Linking C executable cmTC_5441c.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_5441c.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_5441c.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_5441c.dir/objects.a @CMakeFiles\cmTC_5441c.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe -g -O3 -idirafter C:/Users/Arsen/Desktop/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=sigaction    -Wl,--whole-archive CMakeFiles\cmTC_5441c.dir/objects.a -Wl,--no-whole-archive  -o cmTC_5441c.exe -Wl,--out-implib,libcmTC_5441c.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_5441c.dir\linklibs.rsp
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: CMakeFiles\cmTC_5441c.dir/objects.a(CheckFunctionExists.c.obj): in function `main':
+C:/Program Files/CMake/share/cmake-3.17/Modules/CheckFunctionExists.c:17: undefined reference to `sigaction'
+collect2.exe: error: ld returned 1 exit status
+CMakeFiles\cmTC_5441c.dir\build.make:104: recipe for target 'cmTC_5441c.exe' failed
+mingw32-make.exe[1]: *** [cmTC_5441c.exe] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Makefile:137: recipe for target 'cmTC_5441c/fast' failed
+mingw32-make.exe: *** [cmTC_5441c/fast] Error 2
+
+
+
+Determining if the function setjmp exists failed with the following output:
+Change Dir: C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/MinGW/bin/mingw32-make.exe cmTC_cfa82/fast && C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_cfa82.dir\build.make CMakeFiles/cmTC_cfa82.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_cfa82.dir/CheckFunctionExists.c.obj
+C:\MinGW\bin\gcc.exe   -g -O3 -idirafter C:/Users/Arsen/Desktop/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=setjmp   -o CMakeFiles\cmTC_cfa82.dir\CheckFunctionExists.c.obj   -c "C:\Program Files\CMake\share\cmake-3.17\Modules\CheckFunctionExists.c"
+Linking C executable cmTC_cfa82.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_cfa82.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_cfa82.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_cfa82.dir/objects.a @CMakeFiles\cmTC_cfa82.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe -g -O3 -idirafter C:/Users/Arsen/Desktop/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=setjmp    -Wl,--whole-archive CMakeFiles\cmTC_cfa82.dir/objects.a -Wl,--no-whole-archive  -o cmTC_cfa82.exe -Wl,--out-implib,libcmTC_cfa82.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_cfa82.dir\linklibs.rsp
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: CMakeFiles\cmTC_cfa82.dir/objects.a(CheckFunctionExists.c.obj): in function `main':
+C:/Program Files/CMake/share/cmake-3.17/Modules/CheckFunctionExists.c:17: undefined reference to `setjmp'
+collect2.exe: error: ld returned 1 exit status
+CMakeFiles\cmTC_cfa82.dir\build.make:104: recipe for target 'cmTC_cfa82.exe' failed
+mingw32-make.exe[1]: *** [cmTC_cfa82.exe] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Makefile:137: recipe for target 'cmTC_cfa82/fast' failed
+mingw32-make.exe: *** [cmTC_cfa82/fast] Error 2
+
+
+
+Determining if the function sysconf exists failed with the following output:
+Change Dir: C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/MinGW/bin/mingw32-make.exe cmTC_47a78/fast && C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_47a78.dir\build.make CMakeFiles/cmTC_47a78.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_47a78.dir/CheckFunctionExists.c.obj
+C:\MinGW\bin\gcc.exe   -g -O3 -idirafter C:/Users/Arsen/Desktop/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=sysconf   -o CMakeFiles\cmTC_47a78.dir\CheckFunctionExists.c.obj   -c "C:\Program Files\CMake\share\cmake-3.17\Modules\CheckFunctionExists.c"
+Linking C executable cmTC_47a78.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_47a78.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_47a78.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_47a78.dir/objects.a @CMakeFiles\cmTC_47a78.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe -g -O3 -idirafter C:/Users/Arsen/Desktop/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=sysconf    -Wl,--whole-archive CMakeFiles\cmTC_47a78.dir/objects.a -Wl,--no-whole-archive  -o cmTC_47a78.exe -Wl,--out-implib,libcmTC_47a78.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_47a78.dir\linklibs.rsp
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: CMakeFiles\cmTC_47a78.dir/objects.a(CheckFunctionExists.c.obj): in function `main':
+C:/Program Files/CMake/share/cmake-3.17/Modules/CheckFunctionExists.c:17: undefined reference to `sysconf'
+collect2.exe: error: ld returned 1 exit status
+CMakeFiles\cmTC_47a78.dir\build.make:104: recipe for target 'cmTC_47a78.exe' failed
+mingw32-make.exe[1]: *** [cmTC_47a78.exe] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Makefile:137: recipe for target 'cmTC_47a78/fast' failed
+mingw32-make.exe: *** [cmTC_47a78/fast] Error 2
+
+
+
+Determining if the function sysctlbyname exists failed with the following output:
+Change Dir: C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/MinGW/bin/mingw32-make.exe cmTC_18341/fast && C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_18341.dir\build.make CMakeFiles/cmTC_18341.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_18341.dir/CheckFunctionExists.c.obj
+C:\MinGW\bin\gcc.exe   -g -O3 -idirafter C:/Users/Arsen/Desktop/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=sysctlbyname   -o CMakeFiles\cmTC_18341.dir\CheckFunctionExists.c.obj   -c "C:\Program Files\CMake\share\cmake-3.17\Modules\CheckFunctionExists.c"
+Linking C executable cmTC_18341.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_18341.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_18341.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_18341.dir/objects.a @CMakeFiles\cmTC_18341.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe -g -O3 -idirafter C:/Users/Arsen/Desktop/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=sysctlbyname    -Wl,--whole-archive CMakeFiles\cmTC_18341.dir/objects.a -Wl,--no-whole-archive  -o cmTC_18341.exe -Wl,--out-implib,libcmTC_18341.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_18341.dir\linklibs.rsp
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: CMakeFiles\cmTC_18341.dir/objects.a(CheckFunctionExists.c.obj): in function `main':
+C:/Program Files/CMake/share/cmake-3.17/Modules/CheckFunctionExists.c:17: undefined reference to `sysctlbyname'
+collect2.exe: error: ld returned 1 exit status
+CMakeFiles\cmTC_18341.dir\build.make:104: recipe for target 'cmTC_18341.exe' failed
+mingw32-make.exe[1]: *** [cmTC_18341.exe] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Makefile:137: recipe for target 'cmTC_18341/fast' failed
+mingw32-make.exe: *** [cmTC_18341/fast] Error 2
+
+
+
+Determining if the function getauxval exists failed with the following output:
+Change Dir: C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/MinGW/bin/mingw32-make.exe cmTC_34f72/fast && C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_34f72.dir\build.make CMakeFiles/cmTC_34f72.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_34f72.dir/CheckFunctionExists.c.obj
+C:\MinGW\bin\gcc.exe   -g -O3 -idirafter C:/Users/Arsen/Desktop/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=getauxval   -o CMakeFiles\cmTC_34f72.dir\CheckFunctionExists.c.obj   -c "C:\Program Files\CMake\share\cmake-3.17\Modules\CheckFunctionExists.c"
+Linking C executable cmTC_34f72.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_34f72.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_34f72.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_34f72.dir/objects.a @CMakeFiles\cmTC_34f72.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe -g -O3 -idirafter C:/Users/Arsen/Desktop/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=getauxval    -Wl,--whole-archive CMakeFiles\cmTC_34f72.dir/objects.a -Wl,--no-whole-archive  -o cmTC_34f72.exe -Wl,--out-implib,libcmTC_34f72.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_34f72.dir\linklibs.rsp
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: CMakeFiles\cmTC_34f72.dir/objects.a(CheckFunctionExists.c.obj): in function `main':
+C:/Program Files/CMake/share/cmake-3.17/Modules/CheckFunctionExists.c:17: undefined reference to `getauxval'
+collect2.exe: error: ld returned 1 exit status
+CMakeFiles\cmTC_34f72.dir\build.make:104: recipe for target 'cmTC_34f72.exe' failed
+mingw32-make.exe[1]: *** [cmTC_34f72.exe] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Makefile:137: recipe for target 'cmTC_34f72/fast' failed
+mingw32-make.exe: *** [cmTC_34f72/fast] Error 2
+
+
+
+Determining if the function poll exists failed with the following output:
+Change Dir: C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/MinGW/bin/mingw32-make.exe cmTC_a5c41/fast && C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_a5c41.dir\build.make CMakeFiles/cmTC_a5c41.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a5c41.dir/CheckFunctionExists.c.obj
+C:\MinGW\bin\gcc.exe   -g -O3 -idirafter C:/Users/Arsen/Desktop/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=poll   -o CMakeFiles\cmTC_a5c41.dir\CheckFunctionExists.c.obj   -c "C:\Program Files\CMake\share\cmake-3.17\Modules\CheckFunctionExists.c"
+Linking C executable cmTC_a5c41.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_a5c41.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_a5c41.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_a5c41.dir/objects.a @CMakeFiles\cmTC_a5c41.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe -g -O3 -idirafter C:/Users/Arsen/Desktop/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=poll    -Wl,--whole-archive CMakeFiles\cmTC_a5c41.dir/objects.a -Wl,--no-whole-archive  -o cmTC_a5c41.exe -Wl,--out-implib,libcmTC_a5c41.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_a5c41.dir\linklibs.rsp
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: CMakeFiles\cmTC_a5c41.dir/objects.a(CheckFunctionExists.c.obj): in function `main':
+C:/Program Files/CMake/share/cmake-3.17/Modules/CheckFunctionExists.c:17: undefined reference to `poll'
+collect2.exe: error: ld returned 1 exit status
+CMakeFiles\cmTC_a5c41.dir\build.make:104: recipe for target 'cmTC_a5c41.exe' failed
+mingw32-make.exe[1]: *** [cmTC_a5c41.exe] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Makefile:137: recipe for target 'cmTC_a5c41/fast' failed
+mingw32-make.exe: *** [cmTC_a5c41/fast] Error 2
+
+
+
+Determining if the function iconv_open exists in the iconv failed with the following output:
+Change Dir: C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/MinGW/bin/mingw32-make.exe cmTC_ece48/fast && C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_ece48.dir\build.make CMakeFiles/cmTC_ece48.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ece48.dir/CheckFunctionExists.c.obj
+C:\MinGW\bin\gcc.exe   -g -O3 -idirafter C:/Users/Arsen/Desktop/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=iconv_open   -o CMakeFiles\cmTC_ece48.dir\CheckFunctionExists.c.obj   -c "C:\Program Files\CMake\share\cmake-3.17\Modules\CheckFunctionExists.c"
+Linking C executable cmTC_ece48.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_ece48.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_ece48.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_ece48.dir/objects.a @CMakeFiles\cmTC_ece48.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe -g -O3 -idirafter C:/Users/Arsen/Desktop/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=iconv_open    -Wl,--whole-archive CMakeFiles\cmTC_ece48.dir/objects.a -Wl,--no-whole-archive  -o cmTC_ece48.exe -Wl,--out-implib,libcmTC_ece48.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_ece48.dir\linklibs.rsp
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: CMakeFiles\cmTC_ece48.dir/objects.a(CheckFunctionExists.c.obj): in function `main':
+C:/Program Files/CMake/share/cmake-3.17/Modules/CheckFunctionExists.c:17: undefined reference to `iconv_open'
+collect2.exe: error: ld returned 1 exit status
+CMakeFiles\cmTC_ece48.dir\build.make:104: recipe for target 'cmTC_ece48.exe' failed
+mingw32-make.exe[1]: *** [cmTC_ece48.exe] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Makefile:137: recipe for target 'cmTC_ece48/fast' failed
+mingw32-make.exe: *** [cmTC_ece48/fast] Error 2
+
+
+
+Determining if the function alloca exists failed with the following output:
+Change Dir: C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/MinGW/bin/mingw32-make.exe cmTC_bd234/fast && C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_bd234.dir\build.make CMakeFiles/cmTC_bd234.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_bd234.dir/CheckFunctionExists.c.obj
+C:\MinGW\bin\gcc.exe   -g -O3 -idirafter C:/Users/Arsen/Desktop/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=alloca   -o CMakeFiles\cmTC_bd234.dir\CheckFunctionExists.c.obj   -c "C:\Program Files\CMake\share\cmake-3.17\Modules\CheckFunctionExists.c"
+<command-line>: warning: conflicting types for built-in function 'alloca'; expected 'void *(unsigned int)' [-Wbuiltin-declaration-mismatch]
+C:\Program Files\CMake\share\cmake-3.17\Modules\CheckFunctionExists.c:7:3: note: in expansion of macro 'CHECK_FUNCTION_EXISTS'
+    7 |   CHECK_FUNCTION_EXISTS(void);
+      |   ^~~~~~~~~~~~~~~~~~~~~
+Linking C executable cmTC_bd234.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_bd234.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_bd234.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_bd234.dir/objects.a @CMakeFiles\cmTC_bd234.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe -g -O3 -idirafter C:/Users/Arsen/Desktop/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=alloca    -Wl,--whole-archive CMakeFiles\cmTC_bd234.dir/objects.a -Wl,--no-whole-archive  -o cmTC_bd234.exe -Wl,--out-implib,libcmTC_bd234.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_bd234.dir\linklibs.rsp
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: CMakeFiles\cmTC_bd234.dir/objects.a(CheckFunctionExists.c.obj): in function `main':
+C:/Program Files/CMake/share/cmake-3.17/Modules/CheckFunctionExists.c:17: undefined reference to `alloca'
+collect2.exe: error: ld returned 1 exit status
+CMakeFiles\cmTC_bd234.dir\build.make:104: recipe for target 'cmTC_bd234.exe' failed
+mingw32-make.exe[1]: *** [cmTC_bd234.exe] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Makefile:137: recipe for target 'cmTC_bd234/fast' failed
+mingw32-make.exe: *** [cmTC_bd234/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test HAVE_SA_SIGACTION failed with the following output:
+Change Dir: C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/MinGW/bin/mingw32-make.exe cmTC_eebf4/fast && C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_eebf4.dir\build.make CMakeFiles/cmTC_eebf4.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_eebf4.dir/src.c.obj
+C:\MinGW\bin\gcc.exe   -g -O3 -idirafter C:/Users/Arsen/Desktop/SDL2-2.0.12/src/video/khronos -DHAVE_SA_SIGACTION   -o CMakeFiles\cmTC_eebf4.dir\src.c.obj   -c C:\Users\Arsen\Desktop\SDL2-2.0.12\Build\CMakeFiles\CMakeTmp\src.c
+C:\Users\Arsen\Desktop\SDL2-2.0.12\Build\CMakeFiles\CMakeTmp\src.c: In function 'main':
+C:\Users\Arsen\Desktop\SDL2-2.0.12\Build\CMakeFiles\CMakeTmp\src.c:6:39: error: dereferencing pointer to incomplete type 'struct sigaction'
+    6 |   (void)sizeof(((struct sigaction *)0)->sa_sigaction);
+      |                                       ^~
+CMakeFiles\cmTC_eebf4.dir\build.make:81: recipe for target 'CMakeFiles/cmTC_eebf4.dir/src.c.obj' failed
+mingw32-make.exe[1]: *** [CMakeFiles/cmTC_eebf4.dir/src.c.obj] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Makefile:137: recipe for target 'cmTC_eebf4/fast' failed
+mingw32-make.exe: *** [cmTC_eebf4/fast] Error 2
+
+
+Source file was:
+
+#include <signal.h>
+
+int main()
+{
+  (void)sizeof(((struct sigaction *)0)->sa_sigaction);
+  return 0;
+}
+
+Performing C SOURCE FILE Test HAVE_XINPUT_H failed with the following output:
+Change Dir: C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/MinGW/bin/mingw32-make.exe cmTC_2403a/fast && C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_2403a.dir\build.make CMakeFiles/cmTC_2403a.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2403a.dir/src.c.obj
+C:\MinGW\bin\gcc.exe   -g -O3 -idirafter C:/Users/Arsen/Desktop/SDL2-2.0.12/src/video/khronos -DHAVE_XINPUT_H   -o CMakeFiles\cmTC_2403a.dir\src.c.obj   -c C:\Users\Arsen\Desktop\SDL2-2.0.12\Build\CMakeFiles\CMakeTmp\src.c
+C:\Users\Arsen\Desktop\SDL2-2.0.12\Build\CMakeFiles\CMakeTmp\src.c:3:18: fatal error: xinput.h: No such file or directory
+    3 |         #include <xinput.h>
+      |                  ^~~~~~~~~~
+compilation terminated.
+CMakeFiles\cmTC_2403a.dir\build.make:81: recipe for target 'CMakeFiles/cmTC_2403a.dir/src.c.obj' failed
+mingw32-make.exe[1]: *** [CMakeFiles/cmTC_2403a.dir/src.c.obj] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Makefile:137: recipe for target 'cmTC_2403a/fast' failed
+mingw32-make.exe: *** [cmTC_2403a/fast] Error 2
+
+
+Source file was:
+
+        #include <windows.h>
+        #include <xinput.h>
+        int main(int argc, char **argv) { }
+Performing C SOURCE FILE Test HAVE_XINPUT_GAMEPAD_EX failed with the following output:
+Change Dir: C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/MinGW/bin/mingw32-make.exe cmTC_987d1/fast && C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_987d1.dir\build.make CMakeFiles/cmTC_987d1.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_987d1.dir/src.c.obj
+C:\MinGW\bin\gcc.exe   -g -O3 -idirafter C:/Users/Arsen/Desktop/SDL2-2.0.12/src/video/khronos -DHAVE_XINPUT_GAMEPAD_EX   -o CMakeFiles\cmTC_987d1.dir\src.c.obj   -c C:\Users\Arsen\Desktop\SDL2-2.0.12\Build\CMakeFiles\CMakeTmp\src.c
+C:\Users\Arsen\Desktop\SDL2-2.0.12\Build\CMakeFiles\CMakeTmp\src.c:3:18: fatal error: xinput.h: No such file or directory
+    3 |         #include <xinput.h>
+      |                  ^~~~~~~~~~
+compilation terminated.
+CMakeFiles\cmTC_987d1.dir\build.make:81: recipe for target 'CMakeFiles/cmTC_987d1.dir/src.c.obj' failed
+mingw32-make.exe[1]: *** [CMakeFiles/cmTC_987d1.dir/src.c.obj] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Makefile:137: recipe for target 'cmTC_987d1/fast' failed
+mingw32-make.exe: *** [cmTC_987d1/fast] Error 2
+
+
+Source file was:
+
+        #include <windows.h>
+        #include <xinput.h>
+        XINPUT_GAMEPAD_EX x1;
+        int main(int argc, char **argv) { }
+Performing C SOURCE FILE Test HAVE_XINPUT_STATE_EX failed with the following output:
+Change Dir: C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/MinGW/bin/mingw32-make.exe cmTC_b53cf/fast && C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_b53cf.dir\build.make CMakeFiles/cmTC_b53cf.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b53cf.dir/src.c.obj
+C:\MinGW\bin\gcc.exe   -g -O3 -idirafter C:/Users/Arsen/Desktop/SDL2-2.0.12/src/video/khronos -DHAVE_XINPUT_STATE_EX   -o CMakeFiles\cmTC_b53cf.dir\src.c.obj   -c C:\Users\Arsen\Desktop\SDL2-2.0.12\Build\CMakeFiles\CMakeTmp\src.c
+C:\Users\Arsen\Desktop\SDL2-2.0.12\Build\CMakeFiles\CMakeTmp\src.c:3:18: fatal error: xinput.h: No such file or directory
+    3 |         #include <xinput.h>
+      |                  ^~~~~~~~~~
+compilation terminated.
+CMakeFiles\cmTC_b53cf.dir\build.make:81: recipe for target 'CMakeFiles/cmTC_b53cf.dir/src.c.obj' failed
+mingw32-make.exe[1]: *** [CMakeFiles/cmTC_b53cf.dir/src.c.obj] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Makefile:137: recipe for target 'cmTC_b53cf/fast' failed
+mingw32-make.exe: *** [cmTC_b53cf/fast] Error 2
+
+
+Source file was:
+
+        #include <windows.h>
+        #include <xinput.h>
+        XINPUT_STATE_EX s1;
+        int main(int argc, char **argv) { }
+Determining if the include file d3d11_1.h exists failed with the following output:
+Change Dir: C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/MinGW/bin/mingw32-make.exe cmTC_8b74d/fast && C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_8b74d.dir\build.make CMakeFiles/cmTC_8b74d.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8b74d.dir/CheckIncludeFile.c.obj
+C:\MinGW\bin\gcc.exe   -g -O3 -idirafter C:/Users/Arsen/Desktop/SDL2-2.0.12/src/video/khronos    -o CMakeFiles\cmTC_8b74d.dir\CheckIncludeFile.c.obj   -c C:\Users\Arsen\Desktop\SDL2-2.0.12\Build\CMakeFiles\CMakeTmp\CheckIncludeFile.c
+C:\Users\Arsen\Desktop\SDL2-2.0.12\Build\CMakeFiles\CMakeTmp\CheckIncludeFile.c:1:10: fatal error: d3d11_1.h: No such file or directory
+    1 | #include <d3d11_1.h>
+      |          ^~~~~~~~~~~
+compilation terminated.
+CMakeFiles\cmTC_8b74d.dir\build.make:81: recipe for target 'CMakeFiles/cmTC_8b74d.dir/CheckIncludeFile.c.obj' failed
+mingw32-make.exe[1]: *** [CMakeFiles/cmTC_8b74d.dir/CheckIncludeFile.c.obj] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Makefile:137: recipe for target 'cmTC_8b74d/fast' failed
+mingw32-make.exe: *** [cmTC_8b74d/fast] Error 2
+
+
+
+Determining if the include file ddraw.h exists failed with the following output:
+Change Dir: C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/MinGW/bin/mingw32-make.exe cmTC_b05a6/fast && C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_b05a6.dir\build.make CMakeFiles/cmTC_b05a6.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b05a6.dir/CheckIncludeFile.c.obj
+C:\MinGW\bin\gcc.exe   -g -O3 -idirafter C:/Users/Arsen/Desktop/SDL2-2.0.12/src/video/khronos    -o CMakeFiles\cmTC_b05a6.dir\CheckIncludeFile.c.obj   -c C:\Users\Arsen\Desktop\SDL2-2.0.12\Build\CMakeFiles\CMakeTmp\CheckIncludeFile.c
+C:\Users\Arsen\Desktop\SDL2-2.0.12\Build\CMakeFiles\CMakeTmp\CheckIncludeFile.c:1:10: fatal error: ddraw.h: No such file or directory
+    1 | #include <ddraw.h>
+      |          ^~~~~~~~~
+compilation terminated.
+CMakeFiles\cmTC_b05a6.dir\build.make:81: recipe for target 'CMakeFiles/cmTC_b05a6.dir/CheckIncludeFile.c.obj' failed
+mingw32-make.exe[1]: *** [CMakeFiles/cmTC_b05a6.dir/CheckIncludeFile.c.obj] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Makefile:137: recipe for target 'cmTC_b05a6/fast' failed
+mingw32-make.exe: *** [cmTC_b05a6/fast] Error 2
+
+
+
+Determining if the include file dsound.h exists failed with the following output:
+Change Dir: C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/MinGW/bin/mingw32-make.exe cmTC_b7a2c/fast && C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_b7a2c.dir\build.make CMakeFiles/cmTC_b7a2c.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b7a2c.dir/CheckIncludeFile.c.obj
+C:\MinGW\bin\gcc.exe   -g -O3 -idirafter C:/Users/Arsen/Desktop/SDL2-2.0.12/src/video/khronos    -o CMakeFiles\cmTC_b7a2c.dir\CheckIncludeFile.c.obj   -c C:\Users\Arsen\Desktop\SDL2-2.0.12\Build\CMakeFiles\CMakeTmp\CheckIncludeFile.c
+C:\Users\Arsen\Desktop\SDL2-2.0.12\Build\CMakeFiles\CMakeTmp\CheckIncludeFile.c:1:10: fatal error: dsound.h: No such file or directory
+    1 | #include <dsound.h>
+      |          ^~~~~~~~~~
+compilation terminated.
+CMakeFiles\cmTC_b7a2c.dir\build.make:81: recipe for target 'CMakeFiles/cmTC_b7a2c.dir/CheckIncludeFile.c.obj' failed
+mingw32-make.exe[1]: *** [CMakeFiles/cmTC_b7a2c.dir/CheckIncludeFile.c.obj] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Makefile:137: recipe for target 'cmTC_b7a2c/fast' failed
+mingw32-make.exe: *** [cmTC_b7a2c/fast] Error 2
+
+
+
+Determining if the include file dinput.h exists failed with the following output:
+Change Dir: C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/MinGW/bin/mingw32-make.exe cmTC_a4133/fast && C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_a4133.dir\build.make CMakeFiles/cmTC_a4133.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a4133.dir/CheckIncludeFile.c.obj
+C:\MinGW\bin\gcc.exe   -g -O3 -idirafter C:/Users/Arsen/Desktop/SDL2-2.0.12/src/video/khronos    -o CMakeFiles\cmTC_a4133.dir\CheckIncludeFile.c.obj   -c C:\Users\Arsen\Desktop\SDL2-2.0.12\Build\CMakeFiles\CMakeTmp\CheckIncludeFile.c
+C:\Users\Arsen\Desktop\SDL2-2.0.12\Build\CMakeFiles\CMakeTmp\CheckIncludeFile.c:1:10: fatal error: dinput.h: No such file or directory
+    1 | #include <dinput.h>
+      |          ^~~~~~~~~~
+compilation terminated.
+CMakeFiles\cmTC_a4133.dir\build.make:81: recipe for target 'CMakeFiles/cmTC_a4133.dir/CheckIncludeFile.c.obj' failed
+mingw32-make.exe[1]: *** [CMakeFiles/cmTC_a4133.dir/CheckIncludeFile.c.obj] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Makefile:137: recipe for target 'cmTC_a4133/fast' failed
+mingw32-make.exe: *** [cmTC_a4133/fast] Error 2
+
+
+
+Determining if the include file dxgi.h exists failed with the following output:
+Change Dir: C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/MinGW/bin/mingw32-make.exe cmTC_0fbe3/fast && C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_0fbe3.dir\build.make CMakeFiles/cmTC_0fbe3.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0fbe3.dir/CheckIncludeFile.c.obj
+C:\MinGW\bin\gcc.exe   -g -O3 -idirafter C:/Users/Arsen/Desktop/SDL2-2.0.12/src/video/khronos    -o CMakeFiles\cmTC_0fbe3.dir\CheckIncludeFile.c.obj   -c C:\Users\Arsen\Desktop\SDL2-2.0.12\Build\CMakeFiles\CMakeTmp\CheckIncludeFile.c
+C:\Users\Arsen\Desktop\SDL2-2.0.12\Build\CMakeFiles\CMakeTmp\CheckIncludeFile.c:1:10: fatal error: dxgi.h: No such file or directory
+    1 | #include <dxgi.h>
+      |          ^~~~~~~~
+compilation terminated.
+CMakeFiles\cmTC_0fbe3.dir\build.make:81: recipe for target 'CMakeFiles/cmTC_0fbe3.dir/CheckIncludeFile.c.obj' failed
+mingw32-make.exe[1]: *** [CMakeFiles/cmTC_0fbe3.dir/CheckIncludeFile.c.obj] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Makefile:137: recipe for target 'cmTC_0fbe3/fast' failed
+mingw32-make.exe: *** [cmTC_0fbe3/fast] Error 2
+
+
+
+Determining if the include file mmdeviceapi.h exists failed with the following output:
+Change Dir: C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/MinGW/bin/mingw32-make.exe cmTC_6f708/fast && C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_6f708.dir\build.make CMakeFiles/cmTC_6f708.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6f708.dir/CheckIncludeFile.c.obj
+C:\MinGW\bin\gcc.exe   -g -O3 -idirafter C:/Users/Arsen/Desktop/SDL2-2.0.12/src/video/khronos    -o CMakeFiles\cmTC_6f708.dir\CheckIncludeFile.c.obj   -c C:\Users\Arsen\Desktop\SDL2-2.0.12\Build\CMakeFiles\CMakeTmp\CheckIncludeFile.c
+C:\Users\Arsen\Desktop\SDL2-2.0.12\Build\CMakeFiles\CMakeTmp\CheckIncludeFile.c:1:10: fatal error: mmdeviceapi.h: No such file or directory
+    1 | #include <mmdeviceapi.h>
+      |          ^~~~~~~~~~~~~~~
+compilation terminated.
+CMakeFiles\cmTC_6f708.dir\build.make:81: recipe for target 'CMakeFiles/cmTC_6f708.dir/CheckIncludeFile.c.obj' failed
+mingw32-make.exe[1]: *** [CMakeFiles/cmTC_6f708.dir/CheckIncludeFile.c.obj] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Makefile:137: recipe for target 'cmTC_6f708/fast' failed
+mingw32-make.exe: *** [cmTC_6f708/fast] Error 2
+
+
+
+Determining if the include file audioclient.h exists failed with the following output:
+Change Dir: C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/MinGW/bin/mingw32-make.exe cmTC_26cac/fast && C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_26cac.dir\build.make CMakeFiles/cmTC_26cac.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_26cac.dir/CheckIncludeFile.c.obj
+C:\MinGW\bin\gcc.exe   -g -O3 -idirafter C:/Users/Arsen/Desktop/SDL2-2.0.12/src/video/khronos    -o CMakeFiles\cmTC_26cac.dir\CheckIncludeFile.c.obj   -c C:\Users\Arsen\Desktop\SDL2-2.0.12\Build\CMakeFiles\CMakeTmp\CheckIncludeFile.c
+C:\Users\Arsen\Desktop\SDL2-2.0.12\Build\CMakeFiles\CMakeTmp\CheckIncludeFile.c:1:10: fatal error: audioclient.h: No such file or directory
+    1 | #include <audioclient.h>
+      |          ^~~~~~~~~~~~~~~
+compilation terminated.
+CMakeFiles\cmTC_26cac.dir\build.make:81: recipe for target 'CMakeFiles/cmTC_26cac.dir/CheckIncludeFile.c.obj' failed
+mingw32-make.exe[1]: *** [CMakeFiles/cmTC_26cac.dir/CheckIncludeFile.c.obj] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/Arsen/Desktop/SDL2-2.0.12/Build/CMakeFiles/CMakeTmp'
+Makefile:137: recipe for target 'cmTC_26cac/fast' failed
+mingw32-make.exe: *** [cmTC_26cac/fast] Error 2
+
+
+
